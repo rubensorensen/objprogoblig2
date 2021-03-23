@@ -7,25 +7,31 @@ Mammal::Mammal(std::string name, e_Sex sex, e_Species species, float weight, e_M
 
 void Mammal::PrintData()
 {
-	std::cout << m_Name << ", Mammal, " << Species() << ", " << Sex() << ", " << m_Weight << "kg" << std::endl;
+	std::cout << "Type: Mammal" << std::endl;
+	std::cout << "Species: " << Species() << std::endl;
+	std::cout << "Name: " << m_Name << std::endl;
+	std::cout << "Sex: " << Sex() << std::endl;
+	std::cout << "Weight: " << m_Weight << "kg" << std::endl;
+	std::cout << "Movement: " << Movement() << std::endl;
+	std::cout << std::endl;
 }
 
 
-void Mammal::Movement()
+std::string Mammal::Movement()
 {
 	switch (m_Movement)
 	{
 	case 0:
-		std::cout << "Walking" << std::endl;
+		return "Walking";
 		break;
 	case 1:
-		std::cout << "Jumping" << std::endl;
+		return "Jumping";
 		break;
 	case 2:
-		std::cout << "Swimming" << std::endl;
+		return "Swimming";
 		break;
 	case 3:
-		std::cout << "Flight" << std::endl;
+		return "Flight";
 		break;
 	}
 }

@@ -48,7 +48,7 @@ int main(void)
 	zoo.AddAnimal(new Mammal("Lars", Animal::e_Sex::Male, Mammal::e_Species::Llama, 40, Animal::e_Movement::Walking));
 	zoo.AddAnimal(new Bird("Astrid", Animal::e_Sex::Female, Bird::e_Species::Toucan, 0.9, Animal::e_Movement::Flight));
 
-	zoo.PrintFishes();
+	zoo.PrintAnimals();
 
 	std::cin.get();
 	return 0;

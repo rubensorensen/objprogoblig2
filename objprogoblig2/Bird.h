@@ -10,7 +10,7 @@ public:
 
 	Bird(std::string name, e_Sex sex, e_Species species, float weight, e_Movement movement);
 	void PrintData();
-	void Movement();
+	std::string Movement();
 
 private:
 	std::string Sex();

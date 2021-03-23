@@ -10,5 +10,5 @@ public:
 	enum e_Movement { Walking, Jumping, Swimming, Flight };
 
 	virtual void PrintData() = 0;
-	virtual void Movement() = 0;
+	virtual std::string Movement() = 0;
 };
