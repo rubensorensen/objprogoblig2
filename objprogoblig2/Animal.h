@@ -11,4 +11,6 @@ public:
 
 	virtual void PrintData() = 0;
 	virtual std::string Movement() = 0;
+	virtual std::string Sex() = 0;
+	virtual std::string Species() = 0;
 };

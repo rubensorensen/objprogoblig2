@@ -14,8 +14,6 @@ public:
 	void PrintFishes();
 	void PrintBirds();
 
-
 private:
 	std::vector<Animal*> m_Animals;
 };
-

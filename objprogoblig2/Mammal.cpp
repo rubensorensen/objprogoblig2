@@ -50,6 +50,7 @@ std::string Mammal::Sex()
 	}
 }
 
+
 std::string Mammal::Species()
 {
 	switch (m_Species)
