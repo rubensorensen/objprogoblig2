@@ -6,13 +6,14 @@ class Bird : public Animal
 {
 public:
 
-	enum e_Species { Sparrow, Penguin, Parrot, Owl, Toucan };
+	enum class e_Species { Sparrow, Penguin, Parrot, Owl, Toucan };
 
 	Bird(std::string name, e_Sex sex, e_Species species, float weight, e_Movement movement);
 	void PrintData();
-	std::string Movement();
+	std::string Name();
 
 private:
+	std::string Movement();
 	std::string Sex();
 	std::string Species();
 	

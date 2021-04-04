@@ -9,6 +9,7 @@ class Zoo
 public:
 	~Zoo();
 	void AddAnimal(Animal* animal);
+	void RemoveAnimal(const std::string& name);
 	void PrintAnimals();
 	void PrintMammals();
 	void PrintFishes();

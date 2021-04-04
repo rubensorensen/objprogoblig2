@@ -6,13 +6,14 @@ class Fish : public Animal
 {
 public:
 
-	enum e_Species { Cod, Goldfish, Guppy, Swordfish };
+	enum class e_Species { Cod, Goldfish, Guppy, Swordfish };
 
 	Fish(std::string name, e_Sex sex, e_Species species, float weight, e_Movement movement);
 	void PrintData();
-	std::string Movement();
+	std::string Name();
 
 private:
+	std::string Movement();
 	std::string Sex();
 	std::string Species();
 

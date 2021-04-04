@@ -20,6 +20,21 @@ void Zoo::AddAnimal(Animal* animal)
 }
 
 
+void Zoo::RemoveAnimal(const std::string& name)
+{
+	for (size_t i{ m_Animals.size() - 1 }; i >= 0; i--)
+	{
+		if (m_Animals[i]->Name() == name)
+		{
+			delete m_Animals[i];
+			m_Animals[i] = nullptr;
+			m_Animals.erase(m_Animals.cbegin() + i);
+			return;
+		}
+	}
+}
+
+
 void Zoo::PrintAnimals()
 {
 	for (auto& a : m_Animals)
@@ -33,7 +48,7 @@ void Zoo::PrintMammals()
 {
 	for (auto& a : m_Animals)
 	{
-		//	Dynamic cast return nullptr if casting is not possible
+		//	Dynamic cast returns nullptr if casting is not possible
 		if (dynamic_cast<Mammal*>(a) != nullptr)
 		{
 			a->PrintData();
@@ -46,7 +61,7 @@ void Zoo::PrintBirds()
 {
 	for (auto& a : m_Animals)
 	{
-		//	Dynamic cast return nullptr if casting is not possible
+		//	Dynamic cast returns nullptr if casting is not possible
 		if (dynamic_cast<Bird*>(a) != nullptr)
 		{
 			a->PrintData();
@@ -59,7 +74,7 @@ void Zoo::PrintFishes()
 {
 	for (auto& a : m_Animals)
 	{
-		//	Dynamic cast return nullptr if casting is not possible
+		//	Dynamic cast returns nullptr if casting is not possible
 		if (dynamic_cast<Fish*>(a) != nullptr)
 		{
 			a->PrintData();

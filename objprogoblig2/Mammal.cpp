@@ -16,21 +16,26 @@ void Mammal::PrintData()
 	std::cout << std::endl;
 }
 
+std::string Mammal::Name()
+{
+	return m_Name;
+}
+
 
 std::string Mammal::Movement()
 {
 	switch (m_Movement)
 	{
-	case 0:
+	case e_Movement::Walking:
 		return "Walking";
 		break;
-	case 1:
+	case e_Movement::Jumping:
 		return "Jumping";
 		break;
-	case 2:
+	case e_Movement::Swimming:
 		return "Swimming";
 		break;
-	case 3:
+	case e_Movement::Flight:
 		return "Flight";
 		break;
 	}
@@ -41,10 +46,10 @@ std::string Mammal::Sex()
 {
 	switch (m_Sex)
 	{
-	case 0:
+	case e_Sex::Male:
 		return "Male";
 		break;
-	case 1:
+	case e_Sex::Female:
 		return "Female";
 		break;
 	}
@@ -55,22 +60,22 @@ std::string Mammal::Species()
 {
 	switch (m_Species)
 	{
-	case 0:
+	case e_Species::Zebra:
 		return "Zebra";
 		break;
-	case 1:
+	case e_Species::Bear:
 		return "Bear";
 		break;
-	case 2:
+	case e_Species::Moose:
 		return "Moose";
 		break;
-	case 3:
+	case e_Species::Fox:
 		return "Fox";
 		break;
-	case 4:
+	case e_Species::Llama:
 		return "Llama";
 		break;
-	case 5:
+	case e_Species::Kangaroo:
 		return "Kangaroo";
 		break;
 	}

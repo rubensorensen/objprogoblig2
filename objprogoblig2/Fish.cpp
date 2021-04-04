@@ -17,20 +17,25 @@ void Fish::PrintData()
 	std::cout << std::endl;
 }
 
+std::string Fish::Name()
+{
+	return m_Name;
+}
+
 std::string Fish::Movement()
 {
 	switch (m_Movement)
 	{
-	case 0:
+	case e_Movement::Walking :
 		return "Walking";
 		break;
-	case 1:
+	case e_Movement::Jumping:
 		return "Jumping";
 		break;
-	case 2:
+	case e_Movement::Swimming:
 		return "Swimming";
 		break;
-	case 3:
+	case e_Movement::Flight:
 		return "Flight";
 		break;
 	}
@@ -41,10 +46,10 @@ std::string Fish::Sex()
 {
 	switch (m_Sex)
 	{
-	case 0:
+	case e_Sex::Male:
 		return "Male";
 		break;
-	case 1:
+	case e_Sex::Female:
 		return "Female";
 		break;
 	}
@@ -54,16 +59,16 @@ std::string Fish::Species()
 {
 	switch (m_Species)
 	{
-	case 0:
+	case e_Species::Cod:
 		return "Cod";
 		break;
-	case 1:
+	case e_Species::Goldfish:
 		return "Goldfish";
 		break;
-	case 2:
+	case e_Species::Guppy:
 		return "Guppy";
 		break;
-	case 3:
+	case e_Species::Swordfish:
 		return "Swordfish";
 		break;
 	}

@@ -18,20 +18,25 @@ void Bird::PrintData()
 	std::cout << std::endl;
 }
 
+std::string Bird::Name()
+{
+	return m_Name;
+}
+
 std::string Bird::Movement()
 {
 	switch (m_Movement)
 	{
-	case 0:
+	case e_Movement::Walking:
 		return "Walking";
 		break;
-	case 1:
+	case e_Movement::Jumping:
 		return "Jumping";
 		break;
-	case 2:
+	case e_Movement::Swimming:
 		return "Swimming";
 		break;
-	case 3:
+	case e_Movement::Flight:
 		return "Flight";
 		break;
 	}
@@ -42,10 +47,10 @@ std::string Bird::Sex()
 {
 	switch (m_Sex)
 	{
-	case 0:
+	case e_Sex::Male:
 		return "Male";
 		break;
-	case 1:
+	case e_Sex::Female:
 		return "Female";
 		break;
 	}
@@ -55,19 +60,19 @@ std::string Bird::Species()
 {
 	switch (m_Species)
 	{
-	case 0:
+	case e_Species::Sparrow:
 		return "Sparrow";
 		break;
-	case 1:
+	case e_Species::Penguin:
 		return "Penguin";
 		break;
-	case 2:
+	case e_Species::Parrot:
 		return "Parrot";
 		break;
-	case 3:
+	case e_Species::Owl:
 		return "Owl";
 		break;
-	case 4:
+	case e_Species::Toucan:
 		return "Toucan";
 		break;
 	}

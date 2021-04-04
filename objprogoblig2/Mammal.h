@@ -6,13 +6,14 @@ class Mammal : public Animal
 {
 public:
 
-	enum e_Species { Zebra, Bear, Moose, Fox, Llama, Kangaroo };
+	enum class e_Species { Zebra, Bear, Moose, Fox, Llama, Kangaroo };
 
 	Mammal(std::string name, e_Sex sex, e_Species species, float weight, e_Movement movement);
 	void PrintData();
-	std::string Movement();
+	std::string Name();
 
 private:
+	std::string Movement();
 	std::string Sex();
 	std::string Species();
 
